@@ -23,4 +23,3 @@ public class CelestialObject {
     ellipse(X,Y,radius*2,radius*2);
   }
 }
-

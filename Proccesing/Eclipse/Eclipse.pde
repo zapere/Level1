@@ -8,12 +8,15 @@ CelestialObject moon;
 void setup() {
   size(1000, 1000);
   sun = new CelestialObject(3, -2, 50, yellow, 50, 700);
-  moon = new CelestialObject(3, -3, 50, white, 30, 900);
+  moon = new CelestialObject(3, -4, 50, white, 50, 1000);
 }
 
 void draw() {
-  //background(blue);
-  setSkyColor(1);
+  float percentageCovered= moon.getPercentCovered(sun);
+  println(""+percentageCovered);
+  background(52,0,65);
+  //setSkyColor(percentageCovered);
+  //setSkyColor();
   sun.draw();
   sun.move();
   moon.draw();

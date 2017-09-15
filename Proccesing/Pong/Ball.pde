@@ -13,24 +13,24 @@ public class Ball {
   }
   
   public void move(){
-   X = X+Xspeed; 
-   Y = Y+Yspeed; 
+   x = x+Xspeed; 
+   y = y+Yspeed; 
   }
   public void draw(){
    fill(0,0,0); 
    ellipse(x, y, radius*2, radius*2);
   }
   
-  public void bounce(Direction d){
+
     
+    
+  
+  public boolean isTouchingPaddle(Paddle p){
+    return true;
     
   }
-  public boolean isTouchingPaddle(paddle){
-    
-    
-  }
-  public boolean isTouchingWall(wall){
-    
+  public boolean isTouchingWall(Wall w){
+   return true; 
     
   }
 }

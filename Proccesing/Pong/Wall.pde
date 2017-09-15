@@ -14,7 +14,7 @@ public class Wall{
   
   public void draw(){
     fill(0,0,0);
-    line(x,y,
+    line(x,y,length,width);
     
   }
   

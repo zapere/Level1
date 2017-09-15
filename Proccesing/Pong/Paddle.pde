@@ -11,9 +11,13 @@ public class Paddle{
     
   }
   
-  public void move(char){
-    
-    
+  public void move(Direction d){
+    if (d == Direction.Up) {
+      y = y-50;
+    }
+    if (d == Direction.Down) {
+      y = y+50;
+    }
   }
   public void draw(){
     fill(0,0,0);

@@ -3,24 +3,26 @@ public class Paddle{
  int y;
  int length;
  int width;
- public Paddle(int x, int y, int length, int width){
+ color Color; 
+ public Paddle(int x, int y, int length, int width, color Color){
     this.x = x;
     this.y = y;
     this.length = length;
     this.width = width;
+    this.Color = Color;
     
   }
   
   public void move(Direction d){
     if (d == Direction.Up) {
-      y = y-50;
+      y = y-5;
     }
     if (d == Direction.Down) {
-      y = y+50;
+      y = y+5;
     }
   }
   public void draw(){
-    fill(0,0,0);
+    fill(Color);
     rect(x,y,length,width);
   }
   

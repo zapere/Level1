@@ -1,15 +1,17 @@
-public class Ball {
+ public class Ball {
   int x;
   int y;
   int radius;
   int Xspeed;
   int Yspeed;
-  public Ball(int x, int y, int radius, int Xspeed, int Yspeed){
+  color Color;
+  public Ball(int x, int y, int radius, int Xspeed, int Yspeed, color Color){
     this.x = x;
     this.y = y;
     this.radius = radius;
     this.Xspeed = Xspeed; 
     this.Yspeed = Yspeed;
+    this.Color = Color;
   }
   
   public void move(){
@@ -17,8 +19,9 @@ public class Ball {
    y = y+Yspeed; 
   }
   public void draw(){
-   fill(0,0,0); 
+   fill(Color); 
    ellipse(x, y, radius*2, radius*2);
+   
   }
   
 

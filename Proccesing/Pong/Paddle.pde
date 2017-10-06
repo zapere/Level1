@@ -15,10 +15,10 @@ public class Paddle{
   
   public void move(Direction d){
     if (d == Direction.Up) {
-      y = y-5;
+      y = y-75;
     }
     if (d == Direction.Down) {
-      y = y+5;
+      y = y+75;
     }
   }
   public void draw(){

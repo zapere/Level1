@@ -17,4 +17,3 @@ public class Wall {
     rect(x, y, length, width);
   }
 }
-

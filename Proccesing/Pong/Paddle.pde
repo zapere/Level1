@@ -25,7 +25,10 @@ public class Paddle{
     fill(Color);
     rect(x,y,length,width);
   }
-  
+  public void changeColor(){
+   this.Color = color(random(255), random(255), random(255));
+    
+  }
   
   
 }

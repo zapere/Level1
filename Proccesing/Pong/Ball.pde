@@ -23,23 +23,26 @@ public class Ball {
     ellipse(x, y, radius*2, radius*2);
   }
 
+public void changeColor(){
+ this.Color = color(random(255), random(255), random(255));
+}
 
 
 
 
   public boolean isTouchingPaddle(Paddle p) {
-    if (this.x >= p.x && this.y >= p.y && this.y >= p.y - 200) {
-     
-      //      this.Xspeed = this.Xspeed *(-1);
+    if (this.x == paddleR.x && this.y >= paddleR.y && this.y <= paddleR.y + 200) {
+      p.changeColor();
+      this.changeColor();
+      this.Xspeed = this.Xspeed *(-1);
       return true;
-    } else {
-      return false;
     }
-    //    if (this.x <= paddleL.x +10 && this.y >= paddleL.y && this.y >= paddleL.y - 200) {
-    //      println("bounce");
-    //      this.Xspeed = this.Xspeed *(-1);
-    //    } 
-    //    return true;
+    if (this.x == paddleL.x +10 && this.y >= paddleL.y && this.y <= paddleL.y + 200) {
+      paddleL.changeColor();
+      this.changeColor();
+      this.Xspeed = this.Xspeed *(-1);
+    } 
+    return true;
   }
 
   public boolean isTouchingWall(Wall w) {
@@ -51,12 +54,13 @@ public class Ball {
     }
     if (this.x - this.radius >= rightWall.x + w.width) {
       player1Score = player1Score +1; 
-      this.x = 512;
+      this.x = 500;
     }
     if (this.x + this.radius <= leftWall.x - w.width) {
+      player2Score = player2Score + 1;
+      this.x = 500;
     }
 
     return true;
   }
 }
-

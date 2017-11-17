@@ -30,6 +30,9 @@ public class Bucket {
     fill(0, 0, 255);
   }
   public void draw() {
+    fill(0, 0, 0);
     rect(x, y, height, length);
+    fill(0, 217, 252);
+    rect(x, y + height - waterLevel, length, waterLevel);
   }
 }
